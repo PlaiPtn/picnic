@@ -6,5 +6,5 @@ public interface Commands {
     int lenFile(List<String> list);
     String bigLenWord(List<String> list);
 
-    Map<String, Integer> frequencyWords();
+    Map<String, Integer> frequencyWords(List<String> list);
 }
