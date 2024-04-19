@@ -7,9 +7,9 @@ public class Controller {
 //    List<String> listWords;
     List<String> listWords;
     Model model;
-    public Controller(String path){
+    public Controller(String name){
         model = new Model();
-        listWords = new ReadFile().readFile(path);
+        listWords = new ReadFile().searchFile(name);
     }
 
     public int lenList(){

@@ -3,6 +3,18 @@ import java.util.*;
 
 public class ReadFile {
     List<String> arr;
+
+
+    public List<String> searchFile(String nameFile){
+        File folder = new File("src/catalog");
+        File[] listFile = folder.listFiles();
+        for(var i: listFile){
+            if (Objects.equals(nameFile, i.getName().substring(0, i.getName().length() - 4))) {
+                return readFile(i.toString());
+            }
+        }
+        return null;
+    }
     public List<String> readFile(String path){
         try(BufferedReader  fr = new BufferedReader(new FileReader((path)));){
             StringBuilder st = new StringBuilder();
