@@ -9,7 +9,8 @@ public class Controller {
     Model model;
     public Controller(String name){
         model = new Model();
-        listWords = new ReadFile().searchFile(name);
+        listWords = new ReadFile().readFile(name);
+
     }
 
     public int lenList(){
